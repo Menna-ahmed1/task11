@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 4000px;
+    position: relative;
+}
+.container1{
+    width: 100%;
+    height: 100vh;
+    background: url(../image/IMG-20250714-WA0027.jpg)center / cover;
+}
+header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: rgba(26, 71, 114, 0.7);
+}
+#input-search{
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: 3px solid hsl(205, 71%, 18%);
+}
+#btn1{
+    width: 60px;
+    height: 30px;
+  border-radius: 7px;
+  border: 3px solid hsl(205, 71%, 18%);
+  color: hsl(205, 71%, 18%);
+}
+nav{
+    float: right;
+    margin-right: 60px ;
+    margin-top: 15px;
+}
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: rgb(250, 226, 160);
+    font-size: 20px;
+    font-weight: bold;
+}
+/* /////////////////////////////////////////////////////////////////////////////////// */
+.container2{
+    margin-top: 100px;
+     width: 80%;
+    height: 400vh;
+    /* background-color: aqua; */
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns:  repeat(3 , 2fr);
+    grid-template-rows: repeat(4 , 2fr);
+    gap: 50px;
+}
+.div1{
+    background: url(../image/IMG-20250714-WA0015.jpg)center / cover;
+    color: aliceblue;
+}
+.div2{
+    background: url(../image/IMG-20250714-WA0016.jpg)center / cover;
+    color: rgb(36, 39, 41);
+}
+.div3{
+    background: url(../image/IMG-20250714-WA0017.jpg)center / cover;
+    color: rgb(54, 22, 9);
+}
+.div4{
+    background: url(../image/IMG-20250714-WA0018.jpg)center / cover;
+    color: rgb(207, 169, 169);
+}
+.div5{
+    background: url(../image/IMG-20250714-WA0019.jpg)center / cover;
+    color: rgb(128, 158, 154);
+}
+.div6{
+    background: url(../image/IMG-20250714-WA0020.jpg)center / cover;
+    color: rgb(12, 12, 12);
+}
+.div7{
+    background: url(../image/IMG-20250714-WA0021.jpg)center / cover;
+    color: rgb(72, 78, 77);
+}
+.div8{
+    background: url(../image/IMG-20250714-WA0022.jpg)center / cover;
+    color: rgb(6, 97, 182);
+}
+.div9{
+    background: url(../image/IMG-20250714-WA0023.jpg)center / cover;
+    color: rgb(76, 77, 77);
+}
+.div10{
+    background: url(../image/IMG-20250714-WA0024.jpg)center / cover;
+    color: rgb(24, 71, 15);
+}
+.div11{
+    background: url(../image/IMG-20250714-WA0025.jpg)center / cover;
+    color: rgb(47, 48, 48);
+}
+.div12{
+    background: url(../image/IMG-20250714-WA0026.jpg)center / cover;
+    color: rgb(24, 71, 15);
+}
+/* ///////////////////////////////////////////footer/////////////////////////////////////////////////// */
+footer{
+    width: 100%;
+    height: 50vh;
+    background-color:hsl(205, 71%, 18%) ;
+    position: absolute;
+    bottom: 0;
+}
+ .face , .insta , .snap , .twit , .whats{
+    color:  rgb(250, 226, 160);
+    font-size: 40px;
+    float: left;
+    margin-left: 180px;
+    margin-top: 150px;
+}
+.face:hover , .insta:hover , .snap:hover , .twit:hover , .whats:hover{
+    animation: icons 3s ease-in  infinite alternate-reverse forwards;
+}
+@keyframes icons{
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.5;
+    }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////// */
+#notfound{
+    color: red;
+    display: none;
+}
+#content{
+    margin-top: 560px;
+    margin-left: 30px;
+    color:  white;
+    font-size: 40px;
+}
+#increment , #decrement{
+    margin-bottom: 10px;
+    width: 25px;
+    margin-left: 12px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(250, 226, 160) ;
+    color: hsl(205, 71%, 18%);
+}
+#increment:active , #decrement:active{
+    background-color:  rgba(219, 192, 117, 0.712);
+}
+/* //////////////////////////////////////media query////////////////////////////////////////////////////////// */
+@media(max-width: 750px){
+    body{
+        height: 5000px;
+    }
+    .container2{
+         grid-template-columns:repeat(2 , 1fr) ;
+        grid-template-rows: repeat(6 , 2fr);
+        gap: 10px;
+    }
+    footer{
+        height: 30vh;
+        margin-bottom: 0;
+    }
+    .face , .insta , .snap , .twit , .whats{
+        font-size: 30px;
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+}
+/* ///////////////////////////////////////////////////////////////////////////// */
+@media(max-width: 550px){
+    body{
+        height: 3800px;
+    }
+    .container2{
+         grid-template-columns:repeat(1 , 200px) ;
+        grid-template-rows: repeat(12 , 200px);
+        gap: 15px;
+        margin-left: 30%;
+    }
+    footer{
+        height: 20vh;
+        margin-bottom: 0;
+    }
+    .face , .insta , .snap , .twit , .whats{
+        font-size: 20px;
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+    #increment , #decrement{
+        /* width: 20px;
+        position: absolute;
+        bottom: 300px; */
+        display: none;
+    }
+    nav a{
+        /* position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 15px;
+        display: flex; */
+        display: none;
+    }
+    
+}
